@@ -1,0 +1,21 @@
+// Hola Mundo.cpp : Defines the entry point for the console application.
+// name: Luis Fernando Veizaga Tapia
+// date: 20/08/16
+// Librerias 
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+//Cuerpo Principal
+
+
+int main()
+{
+	 cout <<"Hola Mundo \n";
+	 cout <<"Soy Fernando",
+     getch();
+	return 0;
+}
