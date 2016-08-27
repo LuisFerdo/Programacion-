@@ -1,0 +1,9 @@
+Proceso Area del Triangulo
+	Definir Base, Altura, Area como Real;
+	Escribir "Ingresar Base: ";
+	Leer Base;
+	Escribir "Ingresar Altura: ";
+	Leer Altura;
+	Area <- (Base*Altura)/2;
+	Escribir "El Area del triangulo es: ", Area;
+FinProceso
