@@ -1,0 +1,7 @@
+Proceso Area del cuadrado
+	Definir Lado Como Real
+	Escribir "Ingresar Lado: "
+	Leer Lado
+	Area <- (Lado*Lado);
+	Escribir "El Area del cuadrado es: ", Area;
+FinProceso
