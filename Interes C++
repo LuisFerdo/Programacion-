@@ -1,0 +1,31 @@
+// Examen Parcial 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main() 
+
+{
+ float K, I, N, P;
+ cout << "Ingrese el capital inicial: ";
+ cin >> K;
+ if (K > 1000)
+ {
+ cout << "Ingrese el interes: ";
+ cin >> I;
+ cout << "Ingrese los dias: ";
+ cin >> N;
+
+ P = (K*I*N)/360;
+ cout << "El impuesto es: " << P;
+ }
+ else
+ cout << "Su prestamo no es mas de 1000, lo siento \n";
+
+getch();
+
+}
