@@ -1,0 +1,34 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+//Prototipo
+bool paroimpar(int numero);
+
+//Cuerpo del programa
+void main()
+{
+	int n;
+	bool sies;
+	cout << "Ingresar el numero: ";
+	cin >> n;
+	sies=paroimpar(n); //Llamar a la función
+	if (sies)
+		cout << "Es par";
+	else
+		cout << "Es impar";
+	getch();
+}
+
+//Declaración de la función
+bool paroimpar(int numero)
+{
+	bool aux; //Se utiliza un auxiliar del mismo tipo de la función
+	if (numero%2==0)
+		aux=true;
+	else
+		aux=false;
+	return aux; //Retorna el valor
+}
