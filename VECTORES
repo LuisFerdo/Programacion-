@@ -1,0 +1,66 @@
+// vectores.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+
+using namespace std;
+
+void cargarvector (int N[], int T);
+void ordenarvector (int N[], int T);
+void mostrarvector (int N[], int T);
+
+void main()
+{
+	int N[MAX], T, V;
+	do 
+	{
+		cout << "Ingresar el tamaño del vector: ";
+		cin >> V;
+	}
+	while ((V<0) || (V>MAX));
+
+	cargarvector (N, V);
+	ordenarvector (N, V);
+	mostrarvector (N, V);
+	getch();
+}
+
+
+void cargarvector (int N[], int T)
+{
+	for (int i=0; i<T; i++)
+	{
+		cout << "Ingrese el vector: ";
+		cin >> N[i];
+	}
+}
+
+
+void mostrarvector (int N[], int T)
+{
+	for (int i=0; i<T; i++)
+	{
+		cout << N[i] << "\n";
+	}
+}
+
+
+void ordenarvector (int N[], int T)
+{
+	float aux;
+	for (int i=0; i<T; i++)
+	{
+		for (int p=i+1; p<T; p++)
+		{
+			if (N[i] > N[p])
+			{
+				aux=N[p];
+				N[p]=N[i];
+				N[i]=aux;
+			}
+		}
+	}
+}
