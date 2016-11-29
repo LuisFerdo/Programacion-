@@ -1,0 +1,100 @@
+// vectoresinfantas.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void cargar(int v[], int n){
+	int i=0,x;
+	cout<<endl;
+	while (i<n){
+	cout<<"v["<<i<<"]:";
+    cin>>x;
+	v[i]=x;
+	i++;
+	}
+}
+void mostrar (int v[], int n) {
+	int i;
+	for(i=0;i<n;i++){
+		cout<<v[i]<<" ";
+
+	}
+
+}
+void ordenar(int v[], int n){
+	int i,j,aux;
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(v[i]>v[j]){
+			aux=v[j];
+			v[j]=v[i];
+			v[i]=aux;
+		
+			}
+
+		}
+
+	}
+}
+void ordenarascendente(int v[],int n){
+	int i,j,aux;
+	for(i=0;i<n;i++){
+		for(j=i+1;j<n;j++){
+			if(v[i]<v[j]){
+			aux=v[j];
+			v[j]=v[i];
+			v[i]=aux;
+		
+			}
+
+		}
+
+	}
+}
+
+void unirvectores(int v[],int v2[],int n,int n2){
+	int i,k=0,j=0,vc[100],c;
+	c=n+n2;
+	for(i=0;i<c;i++){
+		if(i>=n){
+		vc[i]=v2[k];
+		k=k+1;
+		}else{
+		vc[i]=v[j];
+		j=j+1;
+		}
+	}
+	 mostrar (vc,c);
+}
+
+
+
+
+
+void main(){
+int v[100],v2[100];
+int n,n2;
+cout<<"tamaño del vector 1 \n";
+cin>>n;
+cout<<"tamaño del vector 2 \n";
+cin>>n2;
+cout<"vector 1:\n";
+cargar(v,n);
+mostrar (v,n);
+cout<"vector 2:\n";
+cargar(v2,n2);
+//ordenar(v,n);
+//cout<<endl;
+//mostrar (v,n);
+// ordenarascendente( v, n);
+// cout<<endl;
+// mostrar (v,n);
+ cout<<endl;
+ unirvectores(v,v2, n, n2);
+ 
+getch();
+}
